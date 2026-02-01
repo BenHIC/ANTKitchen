@@ -15,10 +15,12 @@ const I18nService = (function () {
       'about.li3': '可訂製低糖／特殊需求',
       'products.title': '招牌商品',
       'products.p1.title': '牛軋糖',
-      'products.p1.text': '主要成分：糖、蛋白、鮮奶油、堅果；口味：蔓越梅開心果、巧克力杏仁、原味杏仁、芝麻核桃、抹茶南瓜子。',
+      'products.p1.ingredients': '<strong>主要成分：</strong>糖、蛋白、鮮奶油、堅果。',
+      'products.p1.flavors': '<strong>口味：</strong>蔓越梅開心果、巧克力杏仁、原味杏仁、芝麻核桃、抹茶南瓜子。',
       'products.p1.br': '',
       'products.p2.title': '雪Q餅',
-      'products.p2.text': '主要成分：奇福餅乾、奶粉、奶油、堅果、果乾；口味：蔓越梅、葡萄乾。',
+      'products.p2.ingredients': '<strong>主要成分：</strong>奇福餅乾、奶粉、奶油、堅果、果乾。',
+      'products.p2.flavors': '<strong>口味：</strong>蔓越梅、葡萄乾。',
       'products.p2.br': '',
       'products.p3.title': '巴斯克焦香重乳酪蛋糕',
       'products.p3.text': '主要成分：奶油乳酪、鮮奶油、砂糖、雞蛋、麵粉。',
@@ -43,10 +45,12 @@ const I18nService = (function () {
       'about.li3': 'Custom low-sugar / special diets',
       'products.title': 'Signature Products',
       'products.p1.title': 'Nougat',
-      'products.p1.text': 'Main ingredients: sugar, egg white, cream, nuts. Flavors: Cranberry & Pistachio; Chocolate & Almond; Original Almond; Sesame & Walnut; Matcha & Pumpkin Seed.',
+      'products.p1.ingredients': '<strong>Main ingredients:</strong> sugar, egg white, cream, nuts.',
+      'products.p1.flavors': '<strong>Flavors:</strong> Cranberry & Pistachio; Chocolate & Almond; Original Almond; Sesame & Walnut; Matcha & Pumpkin Seed.',
       'products.p1.br': '',
       'products.p2.title': 'Snow Q Cookie',
-      'products.p2.text': 'Main ingredients: chiffon cookies, milk powder, butter, nuts, dried fruits. Flavors: Cranberry; Raisin.',
+      'products.p2.ingredients': '<strong>Main ingredients:</strong> chiffon cookies, milk powder, butter, nuts, dried fruits.',
+      'products.p2.flavors': '<strong>Flavors:</strong> Cranberry; Raisin.',
       'products.p2.br': '',
       'products.p3.title': 'Basque Burnt Cheesecake',
       'products.p3.text': 'Main ingredients: cream cheese, heavy cream, sugar, eggs, flour.',
@@ -66,12 +70,18 @@ const I18nService = (function () {
       if (!key) return;
       const translated = map[key];
       if (typeof translated === 'undefined') return;
-      // Preserve decorative icons (e.g. <i class="bi ...">) inside buttons/anchors
-      const icons = Array.from(el.querySelectorAll('i.bi')).map(i => i.outerHTML).join('');
-      if (icons) {
-        el.innerHTML = translated + ' ' + icons;
+      // Preserve decorative icons (e.g. <i class="bi ...">) and keep their original position (before/after text)
+      const iconEls = Array.from(el.querySelectorAll('i.bi'));
+      const iconsHtml = iconEls.map(i => i.outerHTML).join('');
+      if (iconEls.length) {
+        const firstIsIcon = el.firstElementChild && el.firstElementChild.matches && el.firstElementChild.matches('i.bi');
+        if (firstIsIcon) {
+          el.innerHTML = iconsHtml + ' ' + translated;
+        } else {
+          el.innerHTML = translated + ' ' + iconsHtml;
+        }
       } else {
-        el.textContent = translated;
+        el.innerHTML = translated;
       }
     });
     document.querySelectorAll('[data-lang]').forEach((b) => {

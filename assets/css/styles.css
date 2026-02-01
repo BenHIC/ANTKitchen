@@ -30,7 +30,8 @@ section h2{color:var(--brand); font-weight:600}
 
 /* Product card image styling (responsive & crop) */
 .product-img{width:100%; height:220px; object-fit:cover; display:block}
-.card-body p{margin-bottom:0}
+.card-body p{margin-bottom:0.5rem}
+.card-text strong{font-weight:600; display:inline-block; margin-right:0.35rem}
 
 /* Equal height cards */
 .card.h-100{display:flex; flex-direction:column}
