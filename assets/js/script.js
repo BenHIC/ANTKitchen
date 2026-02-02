@@ -106,6 +106,10 @@ const I18nService = (function () {
     localStorage.setItem('antk_lang', lang);
   }
 
+  function localizeStaticElements(lang) {
+    // keep for future expansion; apply() already handles [data-i18n]
+  }
+
   return { apply };
 })();
 
@@ -162,5 +166,26 @@ document.addEventListener('DOMContentLoaded', function () {
   const saved = localStorage.getItem('antk_lang') || 'zh';
   I18nService.apply(saved);
   FormService.init();
+
+  // Nutrition image modal: clicking a nutrition image opens a larger modal view
+  document.querySelectorAll('.nutrition-img').forEach(function (img) {
+    img.addEventListener('click', function (e) {
+      const src = e.currentTarget.getAttribute('src');
+      const modalImg = document.getElementById('nutritionModalImg');
+      if (modalImg) modalImg.setAttribute('src', src);
+      const modalEl = document.getElementById('nutritionModal');
+      if (modalEl) {
+        const modal = new bootstrap.Modal(modalEl);
+        modal.show();
+      }
+    });
+    // keyboard accessibility
+    img.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        e.currentTarget.click();
+      }
+    });
+  });
 });
 

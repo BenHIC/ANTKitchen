@@ -29,12 +29,15 @@ body{padding-top:72px}
 section h2{color:var(--brand); font-weight:600}
 
 /* Product card image styling (responsive & crop) */
-.product-img{width:100%; height:220px; object-fit:cover; display:block}
+.product-img{width:100%; height:260px; object-fit:cover; display:block}
 .card-body p{margin-bottom:0.5rem}
 .card-text strong{font-weight:600; display:inline-block; margin-right:0.35rem}
 
 /* Nutrition label style: keep readable and contained */
-.nutrition-img{width:100%; height:220px; object-fit:contain; background:#fff; padding:8px}
+.nutrition-img{width:100%; height:220px; object-fit:contain; background:#fff; padding:8px; cursor:pointer}
+
+/* Make nutrition modal image max-height comfortable on large screens */
+#nutritionModalImg{max-height:75vh}
 
 /* Equal height cards */
 .card.h-100{display:flex; flex-direction:column}
@@ -44,7 +47,7 @@ footer{border-top:1px solid rgba(0,0,0,0.05)}
 
 @media (max-width:576px){
   .hero{height:45vh}
-  .product-img{height:180px}
+  .product-img{height:200px}
 }
 
 .social-icons i{font-size:1.25rem}
