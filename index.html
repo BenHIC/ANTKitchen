@@ -89,49 +89,140 @@
         <section id="products" class="py-5">
             <h2 class="mb-4" data-i18n="products.title">Signature Products</h2>
             <div class="row gx-4 gy-4">
+                <!-- Nougat -->
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <picture>
-                            <source type="image/webp"
-                                srcset="assets/img/optimized/Nougat-320.webp 320w, assets/img/optimized/Nougat-640.webp 640w, assets/img/optimized/Nougat-1200.webp 1200w, assets/img/optimized/Nougat-1800.webp 1800w"
-                                sizes="(max-width:576px) 100vw, (max-width:992px) 50vw, 33vw">
-                            <img src="assets/img/optimized/Nougat-640.jpg"
-                                srcset="assets/img/optimized/Nougat-320.jpg 320w, assets/img/optimized/Nougat-640.jpg 640w, assets/img/optimized/Nougat-1200.jpg 1200w, assets/img/optimized/Nougat-1800.jpg 1800w"
-                                sizes="(max-width:576px) 100vw, (max-width:992px) 50vw, 33vw"
-                                class="card-img-top product-img" alt="Nougat" loading="lazy" width="1200" height="800">
-                        </picture>
+                        <div id="carousel-nougat" class="carousel slide" data-bs-ride="false">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/img/products/Nougat/Nougat.png"
+                                        class="card-img-top product-img d-block w-100" alt="Nougat">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/products/Nougat/NougatNutrition.png"
+                                        class="card-img-top nutrition-img d-block w-100" alt="Nougat Nutrition">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-nougat"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden" data-i18n="carousel.prev">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-nougat"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden" data-i18n="carousel.next">Next</span>
+                            </button>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title" data-i18n="products.p1.title">Nougat</h5>
-                            <p class="card-text" data-i18n="products.p1.ingredients">Main ingredients: sugar, egg white,
-                                cream, nuts.</p>
-                            <p class="card-text" data-i18n="products.p1.flavors">Flavors:
-                                Cranberry & Pistachio; Chocolate & Almond; Original Almond; Sesame & Walnut; Matcha &
-                                Pumpkin Seed.</p>
+                            <p class="card-text" data-i18n="products.p1.ingredients">Main ingredients</p>
+                            <p class="card-text" data-i18n="products.p1.flavors">Flavors</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Snow Q Cookie -->
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <picture>
-                            <source type="image/webp"
-                                srcset="assets/img/optimized/SnowQCookie-320.webp 320w, assets/img/optimized/SnowQCookie-640.webp 640w, assets/img/optimized/SnowQCookie-1200.webp 1200w, assets/img/optimized/SnowQCookie-1800.webp 1800w"
-                                sizes="(max-width:576px) 100vw, (max-width:992px) 50vw, 33vw">
-                            <img src="assets/img/optimized/SnowQCookie-640.jpg"
-                                srcset="assets/img/optimized/SnowQCookie-320.jpg 320w, assets/img/optimized/SnowQCookie-640.jpg 640w, assets/img/optimized/SnowQCookie-1200.jpg 1200w, assets/img/optimized/SnowQCookie-1800.jpg 1800w"
-                                sizes="(max-width:576px) 100vw, (max-width:992px) 50vw, 33vw"
-                                class="card-img-top product-img" alt="Snow Q Cookie" loading="lazy" width="1200"
-                                height="800">
-                        </picture>
+                        <div id="carousel-snowq" class="carousel slide" data-bs-ride="false">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/img/products/SnowQCookie/SnowQCookie.png"
+                                        class="card-img-top product-img d-block w-100" alt="Snow Q Cookie">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/products/SnowQCookie/SnowQCookieNutrition.png"
+                                        class="card-img-top nutrition-img d-block w-100" alt="SnowQCookie Nutrition">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-snowq"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden" data-i18n="carousel.prev">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-snowq"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden" data-i18n="carousel.next">Next</span>
+                            </button>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title" data-i18n="products.p2.title">Snow Q Cookie</h5>
-                            <p class="card-text" data-i18n="products.p2.ingredients">Main ingredients: chiffon cookies,
-                                milk powder, butter, nuts, dried fruits.</p>
-                            <p class="card-text" data-i18n="products.p2.flavors">Flavors: Cranberry; Raisin.</p>
+                            <p class="card-text" data-i18n="products.p2.ingredients">Main ingredients</p>
+                            <p class="card-text" data-i18n="products.p2.flavors">Flavors</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- SnowQCookie + Nougat combo -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div id="carousel-snowq-nougat" class="carousel slide" data-bs-ride="false">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/img/products/SnowQCookieNougat/SnowQCookieNougat.png"
+                                        class="card-img-top product-img d-block w-100" alt="SnowQCookieNougat">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/products/SnowQCookieNougat/SnowQCookieNougatNutrition.png"
+                                        class="card-img-top nutrition-img d-block w-100"
+                                        alt="SnowQCookieNougat Nutrition">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-snowq-nougat"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden" data-i18n="carousel.prev">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-snowq-nougat"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden" data-i18n="carousel.next">Next</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" data-i18n="products.p5.title">SnowQCookieNougat</h5>
+                            <p class="card-text" data-i18n="products.p5.ingredients">Main ingredients</p>
+                            <p class="card-text" data-i18n="products.p5.flavors">Flavors</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rice Ball -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div id="carousel-riceball" class="carousel slide" data-bs-ride="false">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/img/products/RiceBall/RiceBall.png"
+                                        class="card-img-top product-img d-block w-100" alt="RiceBall">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/products/RiceBall/RiceBallNutrition.png"
+                                        class="card-img-top nutrition-img d-block w-100" alt="RiceBall Nutrition">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-riceball"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden" data-i18n="carousel.prev">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-riceball"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden" data-i18n="carousel.next">Next</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" data-i18n="products.p4.title">RiceBall</h5>
+                            <p class="card-text" data-i18n="products.p4.ingredients">Main ingredients</p>
+                            <p class="card-text" data-i18n="products.p4.flavors">Flavors</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cheesecake kept as-is with i18n -->
                 <div class="col-md-4">
                     <div class="card h-100">
                         <picture>
